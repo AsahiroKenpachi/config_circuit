@@ -1,0 +1,8 @@
+* SPICE3 file created from nor.ext - technology: sky130A
+
+.subckt nor A B gnd vdd
+X0 a_60_n450# A vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X1 a_60_n450# A a_5_n450# gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X2 a_5_n450# B gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X3 a_60_n450# B vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+.ends

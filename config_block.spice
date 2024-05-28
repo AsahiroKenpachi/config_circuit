@@ -1,0 +1,83 @@
+** sch_path: /home/asashirokenpachi/config_block/config_block.sch
+**.subckt config_block vdd l(i-1) l(i) l(x-1) cl(i-2) cl(i-1) l(y-1) l(z-1) l(x) l(y) l(z') l(z) l(y') l(x') gnd
+*.ipin vdd
+*.ipin l(i-1)
+*.ipin l(i)
+*.ipin l(x-1)
+*.ipin cl(i-2)
+*.ipin cl(i-1)
+*.ipin l(y-1)
+*.ipin l(z-1)
+*.opin l(x)
+*.opin l(y)
+*.opin l(z')
+*.opin l(z)
+*.opin l(y')
+*.opin l(x')
+*.ipin gnd
+x1 vdd net2 gnd l(x-1) cl(i-2) nand
+x2 l(y) net1 cl(i-1) vdd gnd nor
+x4 vdd net1 gnd l(i-1) l(x-1) nand
+x5 net3 l(y-1) l(z-1) vdd gnd nor
+x6 l(x) l(i) net1 vdd gnd nor
+x7 vdd l(z) gnd net2 net3 nand
+x8 l(x') vdd gnd l(x) not
+x3 l(z') vdd gnd l(z) not
+x9 l(y') vdd gnd l(y) not
+**.ends
+
+* expanding   symbol:  nand.sym # of pins=5
+** sym_path: /home/asashirokenpachi/config_block/nand.sym
+** sch_path: /home/asashirokenpachi/config_block/nand.sch
+.subckt nand vdd vout gnd A B
+*.ipin A
+*.ipin B
+*.ipin gnd
+*.ipin vdd
+*.opin vout
+XM1 vout A net1 gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 B gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 vout A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 vout B vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  nor.sym # of pins=5
+** sym_path: /home/asashirokenpachi/config_block/nor.sym
+** sch_path: /home/asashirokenpachi/config_block/nor.sch
+.subckt nor vout A B vdd gnd
+*.ipin vdd
+*.ipin gnd
+*.ipin A
+*.ipin B
+*.opin vout
+XM1 vout A gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vout B gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 vout B net1 vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  not.sym # of pins=4
+** sym_path: /home/asashirokenpachi/config_block/not.sym
+** sch_path: /home/asashirokenpachi/config_block/not.sch
+.subckt not vout vdd gnd vin
+*.ipin vin
+*.ipin vdd
+*.ipin gnd
+*.opin vout
+XM1 vout vin gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 vout vin vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2)
++ * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

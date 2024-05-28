@@ -1,0 +1,33 @@
+* SPICE3 file created from config_block.ext - technology: sky130A
+
+X0 a_660_n2395# a_45_n2395# gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X1 a_60_n450# l(i-1) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X2 a_60_n1400# cl(i-2) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X3 l(y) a_60_n450# gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X4 a_45_n2395# l(z-1) a_45_n2045# vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X5 l(y) cl(i-1) a_795_n1050# vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X6 l(z) l(z) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X7 l(z) a_45_n2395# vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X8 a_810_n100# l(i) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X9 l(x) a_60_n450# gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X10 l(y) l(y) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X11 l(z) a_60_n1400# a_660_n2395# gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X12 a_795_n1050# a_60_n450# vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X13 l(z) l(z) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X14 a_60_n450# l(i-1) a_5_n450# gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X15 l(x) l(i) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X16 l(y) l(y) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X17 a_60_n1400# l(x-1) a_5_n1400# gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X18 l(z) a_60_n1400# vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X19 a_45_n2395# l(y-1) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X20 l(x) l(x) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X21 l(x) l(x) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X22 l(x) a_60_n450# a_810_n100# vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X23 a_5_n450# l(x-1) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X24 a_60_n450# l(x-1) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X25 a_5_n1400# cl(i-2) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X26 a_45_n2395# l(z-1) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X27 a_60_n1400# l(x-1) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+X28 l(y) cl(i-1) gnd gnd sky130_fd_pr__nfet_01v8 ad=0.4 pd=2.8 as=0.4 ps=2.8 w=1 l=0.15
+X29 a_45_n2045# l(y-1) vdd vdd sky130_fd_pr__pfet_01v8 ad=1.7 pd=5.7 as=1.7 ps=5.7 w=2 l=0.15
+
